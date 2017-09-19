@@ -1,0 +1,6 @@
+ NEI <- readRDS("summarySCC_PM25.rds)
+  SCC <- readRDS("Source_Classification_Code.rds")
+   b1<- with(NEI, aggregate(Emissions, by = list(year),sum) )
+   png("plot1.png", width = 500, height = 600)
+ plot(b1,type = "o",main = "Total PM2.5 decreased ", xlab = "Years" , ylab = "Emissions from PM2.5",col = 'Brown',lwd = 3, lty = 4, pch = 19 )
+ dev.off()
